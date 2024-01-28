@@ -21,10 +21,10 @@ pipeline {
 1   post { 
         always { 
             echo 'I will always run whether job is success or not'
-        },
+        }
         success { 
             echo 'I will run only job is success'
-        },
+        }
         failure { 
             echo 'I will run when failure'
         }
