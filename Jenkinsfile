@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-1   post { 
+    post { 
         always { 
             echo 'I will always run whether job is success or not'
         }
