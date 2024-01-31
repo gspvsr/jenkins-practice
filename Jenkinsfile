@@ -90,25 +90,16 @@ pipeline {
         stage('Parallel Stage') {
             parallel {
                 stage('Branch A') {
-                    agent {
-                        label "for-branch-a"
-                    }
                     steps {
                         echo "On Branch A"
                     }
                 }
                 stage('Branch B') {
-                    agent {
-                        label "for-branch-b"
-                    }
                     steps {
                         echo "On Branch B"
                     }
                 }
                 stage('Branch C') {
-                    agent {
-                        label "for-branch-c"
-                    }
                     stages {
                         stage('Nested 1') {
                             steps {
