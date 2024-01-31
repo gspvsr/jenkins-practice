@@ -87,12 +87,13 @@ pipeline {
     }
 
     stage('PROD Deploy') {
-            when {
-                branch 'master'
-            }
-            steps {
-                echo 'Deploying to PROD'
-            }
+        when {
+            branch 'master'
+        }
+        steps {
+            echo 'Deploying to PROD'
+        }
+    }
 
     post { 
         always { 
