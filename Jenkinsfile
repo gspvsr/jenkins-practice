@@ -5,6 +5,9 @@ pipeline {
         timeout(time: 1, unit: 'HOURS')
     }
 
+    triggers {
+        cron('* * * * *')
+
     environment {
         USER = 'gsp'
     }
