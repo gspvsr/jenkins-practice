@@ -20,7 +20,6 @@ pipeline {
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-
     stages {
         stage('Build') {
             steps {
@@ -52,8 +51,8 @@ pipeline {
                 sh 'printenv'
             }
         }
-        
-        stage('Example') {
+
+        stage('Example1') {
             steps {
                 echo "Hello ${params.PERSON}"
 
