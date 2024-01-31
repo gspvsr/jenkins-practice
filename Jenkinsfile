@@ -30,11 +30,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
-        }
-
-        stage('Example') {
-            environment {
-        }
+        } 
     }
 
     post { 
