@@ -79,12 +79,15 @@ pipeline {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
         }
-
-        stage('Parallel Stage') {
+        stage('PROD DEploy'){
             when {
-                branch 'master'
+                environment name: 'USER' , value: 'sivakumar'
             }
-            failFast true
+            steps {
+                echo "deploying to PROD"
+            }
+        }
+        stage('Parallel Stage') {
             parallel {
                 stage('Branch A') {
                     agent {
