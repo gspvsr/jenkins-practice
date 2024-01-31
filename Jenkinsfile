@@ -7,7 +7,8 @@ pipeline {
 
     triggers {
         cron('* * * * *')
-
+    }
+    
     environment {
         USER = 'gsp'
     }
