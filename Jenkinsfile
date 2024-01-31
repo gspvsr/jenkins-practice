@@ -13,12 +13,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh '''
+              sh '''
                 ls -ltr
                 pwd
                 echo "hello-from GITHUB push webhook event santh prakash"
                 printenv
-                '''
+              '''
             }
         }
         stage('Test') {
@@ -30,6 +30,10 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
+        }
+
+        stage('Example') {
+            environment {
         }
     }
 
